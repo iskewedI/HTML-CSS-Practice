@@ -1,0 +1,44 @@
+-Padding => Used to add white space between elements
+-Margin => Used to separate elements
+    -Margin collapsing => The margin of element A is overheaded the margin of element B.
+    -Does not impact on the size of an element.
+-Sizing elements =>     
+    -Use box-sizing: border-box to set the width and height to the BORDER level value.
+        -*, *::before, *::after { border-sizing: border-box } is commonly used
+-Div has the display: block property by default (use 100% of horizontal space and others are inserted in NEW LINE)
+-Span hast the display: inline property by default (dont cares about width and height and are displayed in the SAME LINE)
+-Use display: inline-block to set an element to use WIDTH/HEIGHT and NOT USE 100% of the horizontal space.
+-Overflowing => 
+    -overflow: auto sets scroll bar to only appear if overflow happens.
+-Measurement Units => 
+    -Absolute: px | pt | in | cm | mm 
+    -Relative: 
+        -% -> Relative to the size of the container
+        -vw | vh -> Relative to the viewport (% of the vh or vw)
+        -em | rem -> Relative to the font size {
+            em: * times the font size of the CURRENT element
+            rem: * times the font size of the ROOT element
+        }
+-Divs default => Width: container width | Height: fit the content (0 initial)
+-Positioning => By default, all elements have the "static" position
+    -Relative => 
+        -Position the element from its ORIGINAL position.
+        -Another elements are not affected.
+    -Absolute =>
+        -Position the element from its CONTAINER position.
+        -The container MUST be positioned RELATIVELY.
+        -The asbolutely positioned element stop being a child of the container, "it doesn't exist"
+    -Fixed => 
+        -Position the element relative to the VIEW-PORT.
+-Floating elements => 
+    -Makes an element to float to some position (TOP, RIGHT, BOTTOM, LEFT).
+    -Other sibling elements will float around it.
+    -In other elements ->
+        -Use the "clear": directionOfElementFloat or BOTH to stop the element to be floated.
+    -We ALWAYS need to clear the float, or weird issues will appear ->
+        -Good practice: Use the AFTER pseudo-class to clear:
+            -floatedElement::after {
+                content: "",
+                display: block;
+                clear: both;
+            }
