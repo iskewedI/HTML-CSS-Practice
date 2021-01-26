@@ -42,3 +42,21 @@
                 display: block;
                 clear: both;
             }
+-FlexBox => Used to align items in one direction (Vertical & Horizontal)
+    -Two axis => Main (primary) | Cross (secondary) -> Main axis is the DIRECTION 
+    -To align items => 
+        -justify-content -> Along the MAIN axis
+        -align-items -> Alogn the CROSS axis
+    -The display: flex elements are STILL BLOCK elements (height is setted to fit the content, no more)
+    -The items get smaller to fit all the items in one direction (default behaviour, changed with flex-wrap: wrap property)
+    -align-content property => Align MULTIPLE LINES or entire content (if content is wrapped in multiple lines )
+    -align-self => Align a particular element in flexbox - Overwrite the align-items property for the element
+    -Sizing => {
+        -flex-basis -> initial size of flex item
+        -flex-grow -> growth factor -> Grow to take the available space -> 0 by default
+            - 1) Gets the sum of grow factor of each FLEX ITEM
+            - 2) Gets the total available space and divide it by the sum of grow factor, to get SECTIONS
+            - 3) Assigns SECTIONS to each FLEX ITEM depending on their GROW FACTOR
+        -flex-shrink -> shrink factor -> Opposite of flex-grow -> How item should shrink if it's not enough space
+        -flex -> combines all previous properties
+    } -> Should be applied in FLEX ITEMS, NOT CONTAINERS
