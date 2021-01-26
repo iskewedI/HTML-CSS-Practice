@@ -42,7 +42,7 @@
                 display: block;
                 clear: both;
             }
--FlexBox => Used to align items in one direction (Vertical & Horizontal)
+-FlexBox => Used to align items in one direction (Vertical or Horizontal) (Row or Column)
     -Two axis => Main (primary) | Cross (secondary) -> Main axis is the DIRECTION 
     -To align items => 
         -justify-content -> Along the MAIN axis
@@ -60,3 +60,28 @@
         -flex-shrink -> shrink factor -> Opposite of flex-grow -> How item should shrink if it's not enough space
         -flex -> combines all previous properties
     } -> Should be applied in FLEX ITEMS, NOT CONTAINERS
+-Grid => To lay out elements in BOTH row and columns
+    -display: grid in CONTAINER
+    -grid-template-rows and grid-template-columns to define numbers and sizes of each one.
+    -Align items => 
+        -justify-items -> Along the HORIZONTAL axis
+        -align-items -> alogn the VERTICAL axis
+        -justify-content -> justify entire content in HORIZONTAL axis
+        -align-content -> align entire content in VERTICAL axis
+    -Gap => 
+        -row-gap
+        -column-gap
+        -gap -> shorthand
+    -Placing items -> ITEM properties
+        -grid-row -> Number of row where the item will be placed
+        -grid-column -> Number of column where the item will be placed
+        -grid-area -> Four values => start (row-column ) / end (row-column)
+    -Placing items in NAMED AREAS ->
+        -grid-template-areas -> Defined in the container to define areas
+        -grid-area -> Specify the area that will use
+-Hiding elements => 
+    -display: none => Hide element as if the element NEVER was there.
+    -visibility: hidden => Hidden but space for that element is still used.
+-Media queries => Provide different styles depending of different sizes, etc. -> RESPONSIVE design.
+    -Desktop first.
+    -Movile first => Most used because is eassier to build simple app and then add more things to desktop 
