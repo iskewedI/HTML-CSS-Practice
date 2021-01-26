@@ -1,0 +1,32 @@
+.photoContainer {
+  display: grid;
+
+  grid-gap: 5px;
+  grid-template: repeat(9, 15vh) / 15vh;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .photoContainer {
+    grid-template: repeat(5, 15vh) / repeat(2, 15vh);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .photoContainer {
+    grid-template: repeat(4, 15vh) / repeat(3, 15vw);
+    grid-template-areas:
+      'first second second'
+      'third second second'
+      'fourth fifth sixth'
+      'seventh eighth nineth';
+  }
+  .focusedPhoto {
+    grid-area: second;
+  }
+}

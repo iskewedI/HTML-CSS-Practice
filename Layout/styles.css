@@ -46,7 +46,7 @@
   /* Fr means => A fraction of the available space */
   grid-template: repeat(3, 100px) / 100px 30fr 70fr; /* Fix the previous problem -> Use FR */
 
-  grid-template: 100px auto 100px / 30fr 70fr; /* Overflows the container -> PROBLEM */
+  grid-template: 100px auto 100px / 30fr 70fr;
 
   /* justify-content: center;
   align-content: center; */
