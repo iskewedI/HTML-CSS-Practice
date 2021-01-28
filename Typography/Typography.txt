@@ -1,0 +1,54 @@
+-Types => 
+    -Serif -> Professional and serious - Have Edges
+        -Georgia
+        -Times New Roman
+    -Sans-serif -> Playful and modern.
+        -Avenir
+        -Arial
+        -Roboto
+        -Helvetica
+    -Monospace -> All character have same width - CODE
+        -Consolas
+        -Courier
+        -Ubuntu
+-Font-display => Defines what to do while the font is being downloaded
+    -block => HIDE the text until the font is downloaded 
+    -fallback => FALLBACK to another font until the font is downloaded
+    -optional => If font is downloaded fast, it will be shown, but if not, it will be downloaded in background
+                    and cached in storage. In the next load, it will be loaded.
+-To reduce 'Flash of Unstyled Text' =>
+    -Use font-display -> OPTIONAL
+    -Use Expert optimization in Webfont Generator and choose only the chracter types and languages that we use.
+    -Use a SYSTEM FONT STACK
+-In link elements, the property "rel=preconnect" allow the site to connect at soon as possible to a webpage to download
+    the contents of it faster.
+-Sizing Fonts => 
+    -Avoid using PX -> differences in several devices.
+    -In HTML -> Declare font-size to 62.5% -> the 62.5% of 16px (default) is 10px. So calculations in REM are easier.
+    -Relative units ->
+        -rem -> x times font size of root element (html)
+-Law of Proximity -> Objects that are closer are perceived to be related.
+-Vertical Spacing => 
+    -margin 
+    -line-height -> 1.5% the font size => 
+        -If the value has NOT a unit -> It'll be used as a multiplier to the font size -> Use 1.5 directly
+-Horizontal Spacing =>
+    -letter-spacing
+    -word-spacing
+    -width
+-Ideal line length => 50-70 characters
+    -To archive this => For P elements => define width to 50ch
+        -ch => relative to the width of the 0 character => 50 0s
+-Formatting text => 
+    -text-align
+    -text-indent
+    -text-decoration
+    -text-transform
+    -white-space
+    -column-*
+    -direction
+-Truncating text =>
+    -Set a fixed WIDTH
+    -Set WHITE-SPACE to nowrap
+    -Set OVERFLOW to hidden
+    -Set TEXT-OVERFLOW to ellipsis
