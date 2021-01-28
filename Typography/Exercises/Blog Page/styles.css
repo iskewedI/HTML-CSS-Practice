@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'OpenSans Regular';
+  src: url('../../fonts/open-sans/opensans-regular-webfont.woff') format('woff'),
+    url('../../fonts/open-sans/opensans-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: optional; /* While its being downloaded, what to do  */
+}
+
+html {
+  font-size: 65.5%;
+}
+
+body {
+  font-family: 'OpenSans Regular';
+  font-size: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  color: #111;
+}
+
+p {
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.recipe {
+  max-width: 1140px;
+  margin: 5rem auto;
+  padding: 2rem 5rem;
+  border: solid black;
+}
+
+.recipeImage {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.recipeItem {
+  font-size: 1.3rem;
+}
