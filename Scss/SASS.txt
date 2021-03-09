@@ -1,0 +1,3 @@
+-Formatos de archivo => 
+    -scss -> Es un superset de CSS -> codigo css con añadidos
+    -sass -> Distinto, sitanxis moderna -> Sin llaves, puntos y comas

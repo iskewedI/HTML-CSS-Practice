@@ -1,0 +1,45 @@
+-2 types of images => 
+    -Raster -> PIXELS
+        -Cameras/Scanners
+        -JPG | PNG | GIF
+        -Large image => More Pixels => Large file size
+        -Blurry if scaled up
+        -JPEG does not support animations nor transparency.
+    -Vector -> Maths
+        -Software
+        -SVG (Scalable Vector Graphics)
+        -Sharp at any size
+-2 ways to set images => 
+    -Content Images
+        -Decoration purpose
+    -Background Images
+        -Added by CSS
+-Reduce HTTP requests =>
+    -CSS Sprites
+        -No scalable.
+    -Data URLs
+        -Insert a long string starting with "data" instead of "http:".
+        -They comes from the memory.
+        -Size of embedded code is BIGGER than size of http image.
+        -Increase complexity.
+        -Slow on mobile devices.
+-Clipping images
+    -clip-path -> Shapes and values for clipping.
+-Filters
+    -We can insert multiple filters.
+    -greyscale(70%) blur(3px)
+-High-density Screens
+    -Device's terms => 
+        -Physical Resolution -> Actual number of pixels on the device.
+        -Logical Resolution -> How they behave (CSS applies here)
+        -Device Pixel Ratio (DPR) -> Ratio of Physical to Logical resolution.
+        -High Density -> DPR > 1
+    -Generally, the Scale factor (DPR) of these devices are bigger (2x, +). 
+        -Images will be scaled up and will be shown blurry.
+    -To get the 1x, 2x, 3x version from an image => Use Photoshop.  
+        -Always start with the bigger resolutions.
+    -Compression standard => Quality 7 (Photoshop)
+    -'srcset' attribute for img elements ->
+        -srcset="images/x.jpg 1x, 
+                 images/x@2x.jpg 2x,
+                 images/x@3x.jpg 3x,"
