@@ -43,3 +43,28 @@
         -srcset="images/x.jpg 1x, 
                  images/x@2x.jpg 2x,
                  images/x@3x.jpg 3x,"
+            -We can use 400w - 800w to set the actual width of image:
+                -srcset="images/x.jpg 400w, 
+                    images/x@2x.jpg 800w,
+                    images/x@3x.jpg 1200w"
+            -We can use "sizes" attr to set media conditions:
+                -sizes="(max-width: 500px) 100vw,
+                        (max-width: 700px) 50vw
+                        33vw"
+            -Use 'responsivebreakpoints.com' to get the number breakpoints to set. 
+-WebP images => 
+    -Conversion with Photoshop (WebPShop plug-in) - Sketch - Online Tools - Command-line tools.
+    -Lightful images.
+    -To support more browser that not supports WebP =>
+        -Use <picture> element with =>
+            -<source type="image/webp" srcset="images/x.webp" />
+            -<source type="image/jpeg" srcset="images/x.jpg" />
+            -<img src="images/x.jpg" alt="An image" />
+        -The last IMG element is used to support more browser that not supports picture&source and to set an ALT attr.
+-Art Direction =>
+    -Show only a part of the img.
+    -Using the picture&source => 
+        -<source media="(max-width: 500px) srcset="images/x-cropped.jpg" />
+        -<source media="(min-width: 500px) srcset="images/x-cropped.jpg" />
+-Icon Fonts =>
+    -Most popular: Font Awesome - Ionicons - Material Design Icons
