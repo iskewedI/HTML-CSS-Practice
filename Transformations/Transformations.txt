@@ -1,0 +1,7 @@
+-Type of transformations => 
+    -rotate()
+    -scale()
+    -skew()
+    -translate()
+-Uses hardware acceleration - Better performance
+-Perspectives => The distance between US and the ELEMENT

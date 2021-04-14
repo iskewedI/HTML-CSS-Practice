@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  gap: 15px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: gold;
+
+  padding: 15px;
+}
+
+.rotate:hover {
+  transform: rotate(15deg);
+  /* transform: rotate(-15deg); */
+}
+
+.scale:hover {
+  transform: scale(1.5);
+  /* transform: scale(0.5); Half the size */
+}
+
+.skew:hover {
+  transform: skew(15deg);
+}
+
+.translate:hover {
+  transform: translate(20px, 30px);
+}
+
+.multiple:hover {
+  transform: translateX(40px) skew(-15deg); /* The order MATTERS */
+}
+
+.translate-3d:hover {
+  transform: translateZ(50px); /* Nothing happens, we need to supply a PERSPECTIVE */
+  transform: perspective(200px) translateZ(50px);
+}
+
+.rotate-3d:hover {
+  transform: perspective(200px) rotateY(45deg);
+  transform-origin: 0 50%; /* X,Y values to start */
+}
+
+/* Problem: boxes have different perspectives*/
+/* .container:hover .box {
+  transform: perspective(200px) rotateY(45deg);
+  transform-origin: 0 50%; 
+} */
+
+.container {
+  perspective: 200px;
+}
+.container:hover .box {
+  transform: rotateY(45deg);
+  transform-origin: 0 50%;
+}
