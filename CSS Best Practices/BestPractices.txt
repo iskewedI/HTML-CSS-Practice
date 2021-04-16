@@ -1,0 +1,19 @@
+-Follow a naming convention.
+-Create logical sections in .css files.
+-Avoid over-specific selectors.
+-Avoid !important.
+-Sortin with VS CODE.
+-Extract repetitive patterns (Object Oriented).
+-Avoid repetitive values (DRY).
+
+
+/ Variables /
+-Custom properties.
+-Get rid of duplicated properties.
+
+/ Object Oriented CSS /
+-Separate container from content.
+-Separate structure and skin.
+
+/ BEM - Block Element Modifier /
+-Think webpage as a bunch of blocks or components, modules that can contain elements and can be modified.
